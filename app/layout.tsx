@@ -19,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:bg-pink-400 dark:bg-blackout text-blackout dark:text-whiteout`}
+        className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:text-white selection:bg-pink-400 dark:bg-zinc-900 text-blackout dark:text-zinc-100`}
       >
         <nav className="fixed top-0 px-12 p-6 flex w-full items-center justify-between ">
+        
           <svg
             className="absolute right-0 top-0 -scale-x-100 "
             width="53"
@@ -31,7 +32,7 @@ export default function RootLayout({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              className="dark:hidden fill-blackout"
+              className="dark:fill-black fill-blackout"
               d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
               
             />
@@ -46,7 +47,7 @@ export default function RootLayout({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-            className="dark:hidden fill-blackout"
+            className="dark:fill-black fill-blackout"
               d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
               
             />
@@ -82,7 +83,7 @@ export default function RootLayout({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              className="dark:hidden fill-blackout"
+              className="dark:fill-black fill-blackout"
               d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
               
             />
@@ -97,7 +98,7 @@ export default function RootLayout({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-            className="dark:hidden fill-blackout"
+            className="dark:fill-black fill-blackout"
               d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
               
             />
