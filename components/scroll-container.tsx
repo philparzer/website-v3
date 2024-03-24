@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import ContentBox from "./content-box";
+import { useDebounce } from "@uidotdev/usehooks";
 
 interface ScrollContainerProps {}
 
@@ -10,6 +11,8 @@ const WORDS = ["aware", "cutting-edge", "proficient", "daring"];
 
 const ScrollContainer = ({}: ScrollContainerProps) => {
   const [activeContentBoxIndex, setActiveContentBoxIndex] = useState(0);
+
+  const debouncedActiveContentIndex = useDebounce(activeContentBoxIndex, 300);
 
   return (
     <div className="relative w-full mb-[400px] flex flex-col items-center">
@@ -21,22 +24,33 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
             </div>
             <div className="relative leading-normal h-[34px]">
               <div>
-                <div className="absolute h-full flex whitespace-nowrap top-0 left-0 ">
+                <div
+                  key={"hello"}
+                  className="absolute h-full flex whitespace-nowrap top-0 left-0 "
+                >
                   <div>
                     <AnimatePresence mode="popLayout">
-                     {WORDS.filter((_, i) => i === activeContentBoxIndex).map((word, i) => (
+                      {WORDS.filter(
+                        (_, i) => i === debouncedActiveContentIndex
+                      ).map((word, i) => (
                         <motion.div
                           className="absolute left-0 top-0  rounded-lg"
-                          key={word + i}
-                         
-                          initial={{ x: -100, opacity: 0 }}
-                          animate={{ x: 0, opacity: [0, 1, 1, 1, 1] }}
-                          
+                          key={word}
+                          initial={{ x: -20, rotate: 4, opacity: 0 }}
+                          animate={{
+                            x: 0,
+                            rotate: 0,
+                            opacity: [0, 1, 1, 1, 1],
+                            transition: {delay: 0.2}
+                          }}
+                          exit={{ x: 20, rotate: -4, opacity: 0 }}
                         >
-                            <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[120%] h-[120% rounded-full]"></div>
-                          <div className="text-[30px] relative z-10">{word}</div>
+                          <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[120%] h-[120% rounded-full]"></div>
+                          <div className="text-[30px] relative z-10">
+                            {word}
+                          </div>
                         </motion.div>
-                      ))}    
+                      ))}
                     </AnimatePresence>
                   </div>
                 </div>
