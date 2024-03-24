@@ -23,7 +23,7 @@ const ContentBox = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "0.3 center"],
+    offset: ["start start", "0.1 center"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -38,14 +38,16 @@ const ContentBox = ({
     <motion.li
       key={"test"}
       ref={ref}
-      className={`  transition-all relative  ${
+      className={`transition-all relative  ${
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
       <motion.div
-        className={`w-full border relative ${activeIndex === index ? "border-black/10 bg-white/50 backdrop-blur-lg border-t dark:border-zinc-100/10" : "dark:border-zinc-100/5 border-blackout/5"}  ${
-          index === 0 ? "" : "border-t-0"
-        } p-[36px]`}
+        className={`w-full border relative ${
+          activeIndex === index
+            ? "border-black/10 bg-zinc-50  backdrop-blur-lg border-t dark:border-zinc-100/10"
+            : "dark:border-zinc-100/5 border-blackout/5"
+        }  ${index === 0 ? "" : "border-t-0"} p-[36px]`}
         style={activeIndex !== index ? undefined : { opacity: scrollYProgress }}
       >
         {children}
