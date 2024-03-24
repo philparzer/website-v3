@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useState } from "react";
 import ContentBox from "./content-box";
 import { useDebounce } from "@uidotdev/usehooks";
@@ -16,14 +16,14 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
   const debouncedActiveContentIndex = useDebounce(activeContentBoxIndex, 120);
 
   return (
-    <div className="relative w-full mb-[400px] flex flex-col items-center">
-      <div className="relative -translate-x-[4vw]">
+    <div className="relative w-full mb-[200px] flex flex-col items-center">
+      <div className="relative ">
         <div className="sticky z-20  top-[33vh] left-0 translate-x-[100px] max-w-[792px] w-full flex justify-center">
           <div className="flex gap-4 relative -translate-x-[230px] w-full text-[32px] font-semibold items-baseline left-0 ">
             <div className="flex gap-4 items-baseline">
               Philipp <span className="opacity-50 text-[22px]">is</span>{" "}
             </div>
-            <div className="relative leading-normal h-[34px]">
+            <div className="relative leading-normal h-[33px]">
               <div>
                 <div
                   className="absolute h-full flex whitespace-nowrap top-0 left-0 "
@@ -81,7 +81,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
           </div>
         </div>
         <main className="flex min-h-screen flex-col justify-between">
-          <section className="max-w-[792px] w-full mt-[35vh] relative">
+          <section className="max-w-[792px]  w-full mt-[35vh] relative">
             <div className="h-full right-0 top-0 absolute w-[12%] bg-gradient-to-l  dark:from-zinc-900 from-whiteout to-transparent z-10" />
             <ul>
               <ContentBox
@@ -149,7 +149,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
         </main>
       </div>
       <div className="bg-red-200">
-            <div className="bg-gradient-to-t w-screen h-40 from-whiteout via-whiteout to-transparent absolute left-0 bottom-0 z-30"/>
+            <div className="bg-gradient-to-t w-screen h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30"/>
             </div>
     </div>
   );
