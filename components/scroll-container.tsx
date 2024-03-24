@@ -111,7 +111,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   <span className="dark:text-zinc-100 text-blackout">
                     I love shiny new tech.
                   </span>{" "}
-                  But I also know when it's better to go with battle-tested
+                  But I also know when it&lsquo;s better to go with battle-tested
                   solutions instead.
                 </p>
               </ContentBox>
@@ -136,7 +136,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 keywords={["entrepreneur", "agency"]}
               >
                 <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
-                  I'm the co-founder of {" "}
+                  I&lsquo;m the co-founder of {" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
                     <Link href="https://adlerlagune.com" className="underline">adlerlagune</Link>
                   </span>{" "}
