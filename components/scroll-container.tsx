@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import ContentBox from "./content-box";
 
@@ -13,16 +13,40 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
 
   return (
     <div className="relative w-full mb-[400px] flex flex-col items-center">
-      <div className="relative -translate-x-[60px]">
-        <div className="sticky top-[290px] left-0 translate-x-[100px] max-w-[792px] w-full flex justify-center">
-          <div className="flex gap-4 -translate-x-[360px]  text-[32px]  font-semibold items-baseline left-0 ">
-            Philipp <span className="opacity-50 text-[22px]">is</span>{" "}
-            <span className="text-[30px]">{WORDS[activeContentBoxIndex]}</span>
+      <div className="relative -translate-x-[10vw]">
+        <div className="sticky z-20 top-[400px] left-0 translate-x-[100px] max-w-[792px] w-full flex justify-center">
+          <div className="flex gap-4 relative -translate-x-[230px] w-full text-[32px]   font-semibold items-baseline left-0 ">
+            <div className="flex gap-4 items-baseline">
+              Philipp <span className="opacity-50 text-[22px]">is</span>{" "}
+            </div>
+            <div className="relative leading-normal h-[34px]">
+              <div>
+                <div className="absolute h-full flex whitespace-nowrap top-0 left-0 ">
+                  <div>
+                    <AnimatePresence mode="popLayout">
+                     {WORDS.filter((_, i) => i === activeContentBoxIndex).map((word, i) => (
+                        <motion.div
+                          className="absolute left-0 top-0  rounded-lg"
+                          key={word + i}
+                         
+                          initial={{ x: -100, opacity: 0 }}
+                          animate={{ x: 0, opacity: [0, 1, 1, 1, 1] }}
+                          
+                        >
+                            <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[120%] h-[120% rounded-full]"></div>
+                          <div className="text-[30px] relative z-10">{word}</div>
+                        </motion.div>
+                      ))}    
+                    </AnimatePresence>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <main className="flex min-h-screen flex-col justify-between">
-          <section className="max-w-[792px] w-full mt-[310px] relative">
-            <div className="h-full right-0 top-0 absolute w-[20%] bg-gradient-to-l  dark:from-zinc-900 from-whiteout to-transparent z-10" />
+          <section className="max-w-[792px] w-full mt-[410px] relative">
+            <div className="h-full right-0 top-0 absolute w-[12%] bg-gradient-to-l  dark:from-zinc-900 from-whiteout to-transparent z-10" />
             <ul>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
