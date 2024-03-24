@@ -64,10 +64,10 @@ const Nav = () => {
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>
             <li>
-                <Link href="https://linkedin.com/in/philipp-parzer">linkedin</Link>
+                <Link href="https://linkedin.com/in/philipp-parzer">phone</Link>
             </li>
             <li>
-                <Link href="https://linkedin.com/in/philipp-parzer">phone</Link>
+                <Link href="https://linkedin.com/in/philipp-parzer">linkedin</Link>
             </li>
             <li>
                 <Link href="https://twitter.com/philipp_parzer">x.com</Link>
