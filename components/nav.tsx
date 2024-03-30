@@ -59,7 +59,7 @@ const Nav = () => {
           contact
         </PopoverTrigger>
         <PopoverContent>
-          <ul className="flex flex-col gap-4 font-medium underline decoration-zinc-400 underline-offset-2">
+          <ul className="flex flex-col gap-5 font-base underline decoration-zinc-400 underline-offset-2">
             <li>
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>
