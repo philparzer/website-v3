@@ -46,11 +46,12 @@ const ContentBox = ({
       }`}
     >
       <motion.div
-        className={`transition-all relative  ${
+        className={`transition-all z-0 relative  ${
           activeIndex !== index ? "opacity-0" : ""
         }`}
       >
-      <RiveAnimation isActive={activeIndex !== index} stateMachine={riveStateMachine} src={riveSource} />
+        {/*TODO: animate presence */}
+        { activeIndex === index && <RiveAnimation isActive={activeIndex === index} stateMachine={riveStateMachine} src={riveSource} />}
       </motion.div>
       <motion.div
         className={`w-full border relative ${
