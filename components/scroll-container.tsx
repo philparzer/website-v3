@@ -18,7 +18,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
 
   return (
     <div className="relative w-full mb-[200px] flex flex-col items-center">
-      <div className="relative ">
+      <div className="relative">
         <div className="sticky z-20  top-[33vh] left-0 translate-x-[100px] max-w-[792px] w-full flex justify-center">
           <div className="flex gap-4 relative -translate-x-[230px] w-full text-[32px] font-semibold items-baseline left-0 ">
             <div className="flex gap-4 items-baseline">
@@ -80,13 +80,15 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
           </div>
         </div>
         <main className="flex min-h-screen flex-col justify-between">
-          <section className="max-w-[792px]  w-full mt-[35vh] relative">
+          <section className="max-w-[792px] w-full mt-[35vh] relative">
             <div className="h-full right-0 top-0 absolute w-[12%] bg-gradient-to-l  dark:from-zinc-900 from-whiteout to-transparent z-10" />
             <ul>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
                 activeIndex={debouncedActiveContentIndex}
                 index={0}
+                riveSource="/rive/aware.riv"
+                riveStateMachine="1"
                 keywords={["leading teams", "comms", "consulting"]}
               >
                 <p className="text-[22px] max-w-[420px] dark:text-zinc-100/50 text-blackout/50 font-medium">
@@ -104,6 +106,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 setActiveIndex={setActiveContentBoxIndex}
                 activeIndex={debouncedActiveContentIndex}
                 index={1}
+                riveSource="/rive/cutting-edge.riv"
+                riveStateMachine="2"
                 keywords={["rewrite", "rebrand", "improve"]}
               >
                 <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
@@ -118,6 +122,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 setActiveIndex={setActiveContentBoxIndex}
                 activeIndex={debouncedActiveContentIndex}
                 index={2}
+                riveSource="/rive/proficient.riv"
+                riveStateMachine="3"
                 keywords={["engineering", "design"]}
               >
                 <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
@@ -133,6 +139,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 setActiveIndex={setActiveContentBoxIndex}
                 activeIndex={debouncedActiveContentIndex}
                 index={3}
+                riveSource="/rive/daring.riv"
+                riveStateMachine="4"
                 keywords={["entrepreneur", "agency"]}
               >
                 <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">

@@ -6,7 +6,8 @@ import RiveAnimation from "./rive-animation";
 
 interface ContentBoxProps {
   children?: React.ReactNode;
-  animation?: string;
+  riveSource: string;
+  riveStateMachine: string;
   index: number;
   activeIndex: number;
   setActiveIndex: (index: number) => void;
@@ -15,7 +16,8 @@ interface ContentBoxProps {
 
 const ContentBox = ({
   children,
-  animation,
+  riveSource,
+  riveStateMachine,
   activeIndex,
   keywords,
   setActiveIndex,
@@ -43,7 +45,13 @@ const ContentBox = ({
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
-      <RiveAnimation></RiveAnimation>
+      <motion.div
+        className={`transition-all relative  ${
+          activeIndex !== index ? "opacity-0" : ""
+        }`}
+      >
+      <RiveAnimation isActive={activeIndex !== index} stateMachine={riveStateMachine} src={riveSource} />
+      </motion.div>
       <motion.div
         className={`w-full border relative ${
           activeIndex === index
