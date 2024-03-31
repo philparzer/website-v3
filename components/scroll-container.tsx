@@ -1,10 +1,11 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import ContentBox from "./content-box";
 import { useDebounce } from "@uidotdev/usehooks";
 import Link from "next/link";
+import RiveAnimation from "./rive-animation";
 
 interface ScrollContainerProps {}
 
@@ -25,9 +26,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
             </div>
             <div className="relative leading-normal h-[33px]">
               <div>
-                <div
-                  className="absolute h-full flex whitespace-nowrap top-0 left-0 "
-                >
+                <div className="absolute h-full flex whitespace-nowrap top-0 left-0 ">
                   <div>
                     <AnimatePresence mode="popLayout" initial={false}>
                       {WORDS.filter(
@@ -111,8 +110,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   <span className="dark:text-zinc-100 text-blackout">
                     I love shiny new tech.
                   </span>{" "}
-                  But I also know when it&lsquo;s better to go with battle-tested
-                  solutions instead.
+                  But I also know when it&lsquo;s better to go with
+                  battle-tested solutions instead.
                 </p>
               </ContentBox>
               <ContentBox
@@ -126,7 +125,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
                     Hands-on experience
                   </span>{" "}
-                  is an understatement. <br></br>I design, code, and carry product.
+                  is an understatement. <br></br>I design, code, and carry
+                  product.
                 </p>
               </ContentBox>
               <ContentBox
@@ -136,21 +136,22 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 keywords={["entrepreneur", "agency"]}
               >
                 <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
-                  I&lsquo;m the co-founder of {" "}
+                  I&lsquo;m the co-founder of{" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
-                    <Link href="https://adlerlagune.com" className="underline">adlerlagune</Link>
+                    <Link href="https://adlerlagune.com" className="underline">
+                      adlerlagune
+                    </Link>
                   </span>{" "}
                   a digital agency that also acts a front for my side projects.
                 </p>
               </ContentBox>
             </ul>
-            
           </section>
         </main>
       </div>
       <div className="bg-red-200">
-            <div className="bg-gradient-to-t w-screen h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30"/>
-            </div>
+        <div className="bg-gradient-to-t w-screen h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30" />
+      </div>
     </div>
   );
 };

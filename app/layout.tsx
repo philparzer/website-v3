@@ -21,10 +21,9 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:text-white selection:bg-pink-400 dark:bg-zinc-900 text-blackout dark:text-zinc-100`}
       >
-        <Nav />
         <ThemeProvider attribute="class">
+          <Nav />
           {children}
-
           <Footer />
         </ThemeProvider>
       </body>

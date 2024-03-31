@@ -2,6 +2,7 @@ import { motion, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent } from "framer-motion";
 import { useDebounce } from "@uidotdev/usehooks";
+import RiveAnimation from "./rive-animation";
 
 interface ContentBoxProps {
   children?: React.ReactNode;
@@ -42,6 +43,7 @@ const ContentBox = ({
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
+      <RiveAnimation></RiveAnimation>
       <motion.div
         className={`w-full border relative ${
           activeIndex === index
