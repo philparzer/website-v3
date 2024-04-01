@@ -135,7 +135,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://ampass.at"
+                href="https://mypoca.com"
               >
                 <div className="w-[20px] h-[20px] flex items-center justify-center">
                   <Image
