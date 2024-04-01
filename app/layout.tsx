@@ -8,7 +8,7 @@ import Nav from "@/components/nav";
 
 export const metadata: Metadata = {
   title: "Philipp Parzer",
-  description: "design engineer, entrepreneur, consultant",
+  description: "design engineering, and comms",
 };
 
 export default function RootLayout({

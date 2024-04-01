@@ -177,7 +177,7 @@ const Footer = ({}: FooterProps) => {
         </div>
 
         <div className="col-span-4 md:mt-10 text-sm text-center md:text-start">
-          <p className="text-whiteout/50">
+          <div className="text-whiteout/50">
             this site is{" "}
             <Link
               className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
@@ -219,7 +219,7 @@ const Footer = ({}: FooterProps) => {
                 rive
               </Link>
             </p>
-          </p>
+          </div>
           <div className="flex justify-between flex-wrap items-baseline text-center md:text-start">
             <p className="text-whiteout/50 md:w-auto w-full">
               if you have questions or inquiries,{" "}
