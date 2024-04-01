@@ -25,7 +25,7 @@ const ContentBox = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "0.05 center"],
+    offset: ["start start", "-0.2 center"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {

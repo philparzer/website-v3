@@ -161,7 +161,7 @@ const Footer = ({}: FooterProps) => {
                 rel="noopener noreferrer"
                 className="opacity-50 transition-opacity hover:opacity-100"
                 target="_blank"
-                href="https://www.google.com/maps/dir/48.218112,16.3971072/"
+                href="https://www.google.com/maps/dir//Robertgasse,+1020+Wien/@48.2142711,16.3064723,12z/"
               >
                 <p className="mt-2">Robertgasse 1</p>
                 <p>1020, Vienna, Austria</p>
