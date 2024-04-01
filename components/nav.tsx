@@ -59,7 +59,7 @@ const Nav = () => {
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>
             <li>
-              <Link href="https://linkedin.com/in/philipp-parzer">phone</Link>
+              <Link href="tel:+436605439322">phone</Link>
             </li>
             <li>
               <Link href="https://linkedin.com/in/philipp-parzer">

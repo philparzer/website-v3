@@ -66,7 +66,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://youtube.com/philparzer"
+                href="https://github.com/philparzer"
               >
                 GitHub
               </Link>
@@ -86,7 +86,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://instagram.com/philipp_parzer"
+                href="https://discord.com/users/philguin"
               >
                 Discord
               </Link>
@@ -101,7 +101,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://linkedin.com/in/philipp-parzer"
+                href="https://adlerlagune.com"
               >
                 adlerlagune
               </Link>
@@ -111,7 +111,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://twitter.com/philipp_parzer"
+                href="https://buoy-productivity.com"
               >
                 buoy
               </Link>
@@ -121,7 +121,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://youtube.com/philparzer"
+                href="https://jotlog.app"
               >
                 jotlog
               </Link>
@@ -131,7 +131,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://instagram.com/philipp_parzer"
+                href="https://ampass.at"
               >
                 ampass
               </Link>
@@ -181,7 +181,7 @@ const Footer = ({}: FooterProps) => {
             this site is{" "}
             <Link
               className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
-              href="https://github.com"
+              href="https://github.com/philparzer/website-v3"
             >
               open source
             </Link>
