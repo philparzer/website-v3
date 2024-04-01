@@ -44,6 +44,7 @@ const ContentBox = ({
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
+      <div className="relative z-0">
       <AnimatePresence>
         {activeIndex === index && (
           <motion.div
@@ -60,8 +61,9 @@ const ContentBox = ({
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
       <motion.div
-        className={`w-full border relative ${
+        className={`w-full border relative z-10 ${
           activeIndex === index
             ? "border-black/10 bg-zinc-50 dark:bg-whiteout/[0.025]  backdrop-blur-lg border-t dark:border-zinc-100/10"
             : "dark:border-zinc-100/5 border-blackout/5"
