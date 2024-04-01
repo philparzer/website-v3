@@ -1,4 +1,4 @@
-import { motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent } from "framer-motion";
 import { useDebounce } from "@uidotdev/usehooks";
@@ -45,14 +45,22 @@ const ContentBox = ({
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
-      <motion.div
-        className={`transition-all z-0 relative  ${
-          activeIndex !== index ? "opacity-0" : ""
-        }`}
-      >
-        {/*TODO: animate presence */}
-        { activeIndex === index && <RiveAnimation isActive={activeIndex === index} stateMachine={riveStateMachine} src={riveSource} />}
-      </motion.div>
+      <AnimatePresence>
+        {activeIndex === index && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className={` z-0 relative`}
+          >
+            <RiveAnimation
+              isActive={activeIndex === index}
+              stateMachine={riveStateMachine}
+              src={riveSource}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         className={`w-full border relative ${
           activeIndex === index
