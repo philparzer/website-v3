@@ -161,7 +161,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
         </main>
       </div>
       <div className="">
-        <div className="bg-gradient-to-t w-screen h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30" />
+        <div className="bg-gradient-to-t w-full h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30" />
       </div>
     </div>
   );
