@@ -13,6 +13,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@rive-app/react-canvas": "^4.8.4",
     "@uidotdev/usehooks": "^2.4.1",
+    "@vercel/analytics": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.20",
