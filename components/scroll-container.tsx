@@ -5,7 +5,6 @@ import { useState } from "react";
 import ContentBox from "./content-box";
 import { useDebounce } from "@uidotdev/usehooks";
 import Link from "next/link";
-import RiveAnimation from "./rive-animation";
 
 interface ScrollContainerProps {}
 
@@ -17,14 +16,15 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
   const debouncedActiveContentIndex = useDebounce(activeContentBoxIndex, 120);
 
   return (
-    <div className="relative w-full mb-[200px] flex flex-col items-center">
+    <div className="relative w-full md:mb-[200px] max-w-screen flex flex-col items-center">
       <div className="relative">
-        <div className="sticky z-20  top-[33vh] left-0 translate-x-[100px] max-w-[792px] w-full flex justify-center">
-          <div className="flex gap-4 relative -translate-x-[230px] w-full text-[32px] font-semibold items-baseline left-0 ">
-            <div className="flex gap-4 items-baseline">
-              Philipp <span className="opacity-50 text-[22px]">is</span>{" "}
+        <div className="sticky z-20 top-[33vh] left-0 pl-4 md:pl-0 translate-x-0 lg:translate-x-[100px] md:translate-x-[130px] max-w-[792px] w-full flex justify-center">
+          <div className="flex gap-1.5 md:gap-4 relative md:-translate-x-[230px] w-full text-[22px] md:text-[32px] font-semibold items-baseline left-0 ">
+            <div className="flex md:gap-4 gap-1.5 items-baseline">
+              Philipp{" "}
+              <span className="opacity-50 text-lg md:text-[22px]">is</span>{" "}
             </div>
-            <div className="relative leading-normal h-[33px]">
+            <div className="relative leading-normal h-[22px] md:h-[33px]">
               <div>
                 <div className="absolute h-full flex whitespace-nowrap top-0 left-0 ">
                   <div>
@@ -66,8 +66,8 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                             },
                           }}
                         >
-                          <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[110%] rounded-full]"></div>
-                          <div className="text-[30px] relative z-10">
+                          <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[110%] rounded-full"></div>
+                          <div className="text-[20px] md:text-[30px] relative z-10">
                             {word}
                           </div>
                         </motion.div>
@@ -79,7 +79,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
             </div>
           </div>
         </div>
-        <main className="flex min-h-screen flex-col justify-between">
+        <main className="flex min-h-screen flex-col justify-between ">
           <section className="max-w-[792px] w-full mt-[35vh] relative">
             <div className="h-full right-0 top-0 absolute w-[12%] bg-gradient-to-l  dark:from-zinc-900 from-whiteout to-transparent z-10" />
             <ul>
@@ -91,7 +91,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 riveStateMachine="1"
                 keywords={["leading teams", "comms", "consulting"]}
               >
-                <p className="text-[22px] max-w-[420px] dark:text-zinc-100/50 text-blackout/50 font-medium">
+                <p className="text-lg  leading-normal md:text-[22px] max-w-[420px] dark:text-zinc-100/50 text-blackout/50 font-medium">
                   I can deal with{" "}
                   <span className="dark:text-zinc-100 text-blackout">
                     hard deadlines
@@ -110,7 +110,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 riveStateMachine="2"
                 keywords={["rewrite", "rebrand", "improve"]}
               >
-                <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
+                <p className="text-lg  leading-normal md:text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
                   <span className="dark:text-zinc-100 text-blackout">
                     I love shiny new tech.
                   </span>{" "}
@@ -126,7 +126,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 riveStateMachine="3"
                 keywords={["engineering", "design"]}
               >
-                <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
+                <p className="text-lg  leading-normal md:text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
                   I build products solo, from 0 to 1.{" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
                     Hands-on experience
@@ -143,7 +143,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 riveStateMachine="4"
                 keywords={["entrepreneur", "agency"]}
               >
-                <p className="text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
+                <p className="text-lg  leading-normal md:text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
                   I&lsquo;m the co-founder of{" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
                     <Link href="https://adlerlagune.com" className="underline">
@@ -157,7 +157,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
           </section>
         </main>
       </div>
-      <div className="bg-red-200">
+      <div className="">
         <div className="bg-gradient-to-t w-screen h-40 from-whiteout dark:from-zinc-900 dark:via-zinc-900 via-whiteout to-transparent absolute left-0 bottom-0 z-30" />
       </div>
     </div>

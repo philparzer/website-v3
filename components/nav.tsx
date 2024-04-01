@@ -9,9 +9,9 @@ const Nav = () => {
   const [popoverIsOpen, setPopoverIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 px-12 p-6 flex w-full items-center justify-between z-50">
+    <nav className="fixed top-0 md:px-12 p-4 md:p-6 flex w-screen items-center justify-between z-50">
       <svg
-        className="absolute right-0 top-0 -scale-x-100 z-50 "
+        className="hidden md:block absolute right-0 top-0 -scale-x-100 z-50 "
         width="53"
         height="52"
         viewBox="0 0 53 52"
@@ -25,7 +25,7 @@ const Nav = () => {
       </svg>
 
       <svg
-        className="absolute left-0 top-0 z-50"
+        className="hidden md:block absolute left-0 top-0 z-50"
         width="53"
         height="52"
         viewBox="0 0 53 52"
@@ -37,7 +37,7 @@ const Nav = () => {
           d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
         />
       </svg>
-      <Link href="/" className="relative w-[64px] h-[64px]">
+      <Link href="/" className="relative w-[54px] h-[54px] md:w-[64px] md:h-[64px]">
         <Image
           src="/logo-anim.gif"
           unoptimized
@@ -49,12 +49,12 @@ const Nav = () => {
         <PopoverTrigger
           className={`transition-opacity ${
             popoverIsOpen ? "opacity-50" : ""
-          } underline underline-offset-[3px] decoration-[1.5px] decoration-zinc-400 mr-10 font-medium`}
+          } underline underline-offset-[3px]  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
         >
           contact
         </PopoverTrigger>
         <PopoverContent>
-          <ul className="flex flex-col gap-5 font-base underline decoration-zinc-400 underline-offset-2">
+          <ul className="flex flex-col gap-5 font-base underline decoration-blackout/50 dark:decoration-whiteout/50 underline-offset-2">
             <li>
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>

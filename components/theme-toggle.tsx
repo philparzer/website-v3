@@ -24,9 +24,9 @@ export default function ThemeToggle() {
   return (
     <>
     <div className="w-full flex justify-center items-center md:w-auto md:block " suppressHydrationWarning>
-      <div className="relative scale-150 md:scale-100 origin-center">
+      <div className="relative md:scale-100 origin-center">
         <motion.div
-          className={`absolute w-32 h-10 top-0 px-[14px] left-0 flex items-center md:bg-opacity-[7%] border-whiteout/50 bg-whiteout rounded-full`}
+          className={`absolute w-32 h-10 top-0 px-[14px] left-0 flex items-center bg-opacity-[7%] border-whiteout/50 bg-whiteout rounded-full`}
           style={{
             justifyContent:
               theme === "system"

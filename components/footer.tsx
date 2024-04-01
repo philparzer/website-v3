@@ -7,10 +7,10 @@ interface FooterProps {}
 
 const Footer = ({}: FooterProps) => {
   return (
-    <footer className="flex justify-center w-full flex-col items-center">
-      <div className="fixed bottom-0 bg-red-200 w-full z-50">
+    <footer className="flex justify-center w-full flex-col items-center ">
+      <div className="fixed bottom-0 w-full z-50">
         <svg
-          className="absolute bottom-0 right-0 rotate-180 z-50"
+          className="hidden md:block absolute bottom-0 right-0 rotate-180 z-50 md:absolute "
           width="53"
           height="52"
           viewBox="0 0 53 52"
@@ -24,7 +24,7 @@ const Footer = ({}: FooterProps) => {
         </svg>
 
         <svg
-          className="absolute left-0 bottom-0 -scale-x-100 rotate-180 z-50"
+          className="hidden md:block absolute left-0 bottom-0 -scale-x-100 rotate-180 z-50"
           width="53"
           height="52"
           viewBox="0 0 53 52"
@@ -37,8 +37,8 @@ const Footer = ({}: FooterProps) => {
           />
         </svg>
       </div>
-      <div className="bg-blackout p-20 pb-10 rounded-2xl mb-20 text-whiteout grid grid-cols-4">
-        <div className="w-[200px] flex flex-col">
+      <div className="bg-blackout p-20 pb-10 rounded-2xl mb-4 md:mb-20 text-whiteout flex flex-col gap-20 md:gap-0 items-center md:items-start md:grid md:grid-cols-4">
+        <div className="w-[200px] flex flex-col items-center text-center md:items-start md:text-start">
           <h2 className="text-lg font-semibold">Socials</h2>
           <ul className="font-light gap-1 flex flex-col mt-2">
             <li>
@@ -93,7 +93,7 @@ const Footer = ({}: FooterProps) => {
             </li>
           </ul>
         </div>
-        <div className="w-[200px] flex flex-col">
+        <div className="w-[200px] flex flex-col text-center md:items-start md:text-start">
           <h2 className="text-lg font-semibold">Some of my work</h2>
           <ul className="font-light gap-1 flex flex-col mt-2">
             <li>
@@ -139,7 +139,7 @@ const Footer = ({}: FooterProps) => {
           </ul>
         </div>
 
-        <div className="col-span-2 flex justify-end">
+        <div className="col-span-2 flex justify-end text-center md:items-start md:text-start">
           <div className="flex flex-col">
             <h2 className="text-lg font-semibold">Contact</h2>
             <div className=" font-light mt-2">
@@ -169,34 +169,70 @@ const Footer = ({}: FooterProps) => {
             </div>
           </div>
         </div>
-        <div className="col-span-4 mt-20">
+        <div className="col-span-4 md:mt-20 text-center md:items-start md:text-start md:-order-none order-first">
           <h2 className="font-semibold mb-2">Theme</h2>
           <div>
             <ThemeToggle />
           </div>
         </div>
 
-        <div className="col-span-4 mt-10 text-sm">
-          <p className="text-whiteout/75">
+        <div className="col-span-4 md:mt-10 text-sm text-center md:text-start">
+          <p className="text-whiteout/50">
             this site is{" "}
             <Link
-              className="underline decoration-2 text-whiteout/100"
+              className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
               href="https://github.com"
             >
               open source
             </Link>
+            <p>
+              built with some of my favorite tools &mdash; {" "}
+              <Link
+                className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
+                href="https://nextjs.org"
+                target="_blank"
+              >
+                next.js
+              </Link>
+              {", "}
+              <Link
+                className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
+                href="https://tailwindcss.com"
+                target="_blank"
+              >
+                tailwind
+              </Link>
+              {", "}
+              <Link
+                className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
+                href="https://framer.com/motion"
+                target="_blank"
+              >
+                framer motion
+              </Link>
+              {", "}and{" "}
+              <Link
+                className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
+                href="https://rive.app"
+                target="_blank"
+              >
+                rive
+              </Link>
+            </p>
           </p>
-          <div className="flex justify-between items-baseline">
-            <p className="text-whiteout/75">
+          <div className="flex justify-between flex-wrap items-baseline text-center md:text-start">
+            <p className="text-whiteout/50 md:w-auto w-full">
               if you have questions or inquiries,{" "}
               <Link
                 href="mailto:hi@adlerlagune.com"
-                className="underline decoration-2 text-whiteout/100"
+                className="underline decoration-2 text-whiteout/75 hover:text-whiteout/100"
               >
                 reach out
               </Link>
             </p>
-            <p className="text-xs opacity-50">last update: SPRING2024</p>
+            <p className="text-xs opacity-50 text-center w-full mt-10 md:mt-0 md:w-auto">
+              last update: SPRING2024
+            </p>
           </div>
         </div>
       </div>

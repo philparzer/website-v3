@@ -40,7 +40,7 @@ const ContentBox = ({
     <motion.li
       key={"test"}
       ref={ref}
-      className={`transition-all relative  ${
+      className={`transition-all relative   ${
         activeIndex !== index ? "blur-[1px] opacity-50" : ""
       }`}
     >
