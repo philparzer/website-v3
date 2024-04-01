@@ -66,7 +66,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                             },
                           }}
                         >
-                          <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[120%] h-[120% rounded-full]"></div>
+                          <div className="absolute origin-center h-full z-0 backdrop-blur-[2px] w-[110%] rounded-full]"></div>
                           <div className="text-[30px] relative z-10">
                             {word}
                           </div>

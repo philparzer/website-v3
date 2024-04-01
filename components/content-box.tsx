@@ -1,7 +1,6 @@
 import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useMotionValueEvent } from "framer-motion";
-import { useDebounce } from "@uidotdev/usehooks";
 import RiveAnimation from "./rive-animation";
 
 interface ContentBoxProps {

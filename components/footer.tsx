@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
-import { motion } from "framer-motion";
 
 interface FooterProps {}
 

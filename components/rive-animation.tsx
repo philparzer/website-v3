@@ -34,10 +34,10 @@ const RiveAnimation = ({ src, stateMachine, isActive }: RiveAnimationProps) => {
 
   return (
     <div className="absolute w-[500px] h-[404px]">
-      <div className="w-full absolute z-10 -top-[400px]  left-0 h-20 bg-gradient-to-b from-whiteout to-transparent" />
-      <div className="h-full absolute z-10 -top-[200px] w-20 right-[-5px]  bg-gradient-to-l blur-[1px] from-whiteout via-whiteout to-transparent" />
-      <div className="w-20  absolute z-10 -top-[200px] left-0 h-full bg-gradient-to-r blur-[1px] from-whiteout via-whiteout to-transparent" />
-      <RiveComponent className="invert-filter pointer-events-none absolute -top-[400px] left-0 w-full h-full " />
+      <div className="w-full absolute z-10 -top-[404px]  left-0 h-20 bg-gradient-to-b from-whiteout dark:from-zinc-900 to-transparent" />
+      <div className="h-full absolute z-10 -top-[200px] w-20 right-[-5px]  bg-gradient-to-l blur-[1px] from-whiteout dark:from-zinc-900 via-whiteout dark:via-zinc-900 to-transparent" />
+      <div className="w-20  absolute z-10 -top-[200px] left-0 h-full bg-gradient-to-r blur-[1px] from-whiteout dark:from-zinc-900 via-whiteout dark:via-zinc-900 to-transparent" />
+      <RiveComponent className="invert-filter pointer-events-none absolute -top-[401px] left-0 w-full h-full " />
     </div>
   );
 };
