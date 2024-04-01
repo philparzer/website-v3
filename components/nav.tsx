@@ -39,9 +39,10 @@ const Nav = () => {
       </svg>
       <Link href="/" className="relative w-[54px] h-[54px] md:w-[64px] md:h-[64px]">
         <Image
+          priority
           src="/logo-anim.gif"
-          unoptimized
           fill
+          sizes="64px"
           alt="spinning head animation"
         />
       </Link>

@@ -20,14 +20,12 @@ const RiveAnimation = ({ src, stateMachine, isActive }: RiveAnimationProps) => {
 
   useEffect(() => {
     if (isActive && isLoaded) {
-      console.log("playing");
       rive?.play();
     }
   }, [isLoaded, isActive]);
 
   useEffect(() => {
     if (rive) {
-      console.log("loaded");
       setIsLoaded(true);
     }
   }, [rive]);

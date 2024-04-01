@@ -5,14 +5,15 @@ import { useState } from "react";
 import ContentBox from "./content-box";
 import { useDebounce } from "@uidotdev/usehooks";
 import Link from "next/link";
+import useFaviconAnimation from "@/lib/use-favicon-animation";
 
 interface ScrollContainerProps {}
 
 const WORDS = ["aware", "cutting-edge", "proficient", "daring", "daring"];
 
 const ScrollContainer = ({}: ScrollContainerProps) => {
+  useFaviconAnimation();
   const [activeContentBoxIndex, setActiveContentBoxIndex] = useState(0);
-
   const debouncedActiveContentIndex = useDebounce(activeContentBoxIndex, 120);
 
   return (

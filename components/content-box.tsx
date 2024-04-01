@@ -31,8 +31,6 @@ const ContentBox = ({
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("index ", index, "value", latest);
-
     if (latest > 0 && latest !== 1) {
       setActiveIndex(index);
     }
