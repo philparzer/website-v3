@@ -23,9 +23,11 @@ const ContentBox = ({
   index,
 }: ContentBoxProps) => {
   const ref = useRef(null);
+
+  
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "-0.2 center"],
+    offset: ["start start", `${index === 0 ? "0" : "-0.2"} center`], //at index 0 start is already above center -> no negative offset, or the text box is opaque by default
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
