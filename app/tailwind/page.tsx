@@ -98,76 +98,11 @@ const Page = ({}: PageProps) => {
             </TitledParagraph>
           ) : (
             <>
-              <TitledParagraph title="About">
-                <p>
-                  Hi, I&apos;m Phil. I&apos;ve always had a thing for design, but
-                  somewhere in my teens, I realized that traditional drawing, 3D
-                  and 2D design just didn&apos; cut it for me anymore. I needed
-                  something more. Building actual things with code was the
-                  answer.
-                </p>
-              </TitledParagraph>
-              <TitledParagraph title="journey">
-                <p>
-                  My adventure began with C# and Unity, and from there, it was a
-                  bit of a rollercoaster—I dabbled in embedded, and Swift,
-                  improving my understanding of low-level programming, then got
-                  my hands dirty exploring the endless possibilities Rust and
-                  Python during my uni days, and eventually made my way to JS,
-                  TS, and CSS.
-                </p>
-              </TitledParagraph>
-              <TitledParagraph title="webdev">
-                <p>
-                  Web development, and CSS specifically, seemed rough at first
-                  but I immediately fell in love with the endless possibilities
-                  and ways you can go off the beaten path easily. I had finally
-                  found a platform that let me design stuff, and share it with
-                  anyone, anywhere, instantly. I&apos;ve been working professionally
-                  in webdev for 5 years now and plan on doing so for a long
-                  time. Web always wins.
-                </p>
-              </TitledParagraph>
-              <hr className="border-blackout dark:border-whiteout opacity-25" />
-              <TitledParagraph title="tailwind 1">
-                <p>
-                  I have a pretty vivid memory of my first encounter with
-                  Tailwind in the wild. Similar to Typescript I was a bit
-                  cautious at first. But after trying it once, I’ve never looked
-                  back. All the context switching - gone. Fighting over
-                  classnames and dreading redesigns when working in teams -
-                  gone. Weird CSS quirks - way less.
-                </p>
-              </TitledParagraph>
-              <TitledParagraph title="tailwind 2">
-                <p>
-                  But one thing about Tailwind is even bigger for me,
-                  personally: I love to build solo, working for agencies or
-                  building out MVPs completely on my own. What Tailwind has
-                  enabled me to do was to design in code. Usually, I sketch out
-                  a first prototype of the design in Figma, but move to code
-                  pretty early-on and what happens is, I refine the design
-                  in-code. I&apos;ve tried many CSS frameworks but only Tailwind
-                  allowed me to enter this specific design-code flow state.
-                </p>
-              </TitledParagraph>
-              <TitledParagraph title="tailwind 3">
-                <p>
-                  Tailwind has also upped my CSS game in general. Your guys&apos;
-                  docs are incredible at explaining all the different features,
-                  and I find myself checking them even if I&apos;m forced to use a
-                  different CSS framework. Beyond just using Tailwind in my own
-                  projects, I&apos;ve also had the pleasure of introducing it to devs
-                  I&apos;ve worked with. Many were skeptical or unsure at first, but
-                  through hands-on demonstrations they came around pretty
-                  quickly. Some of them have even become Tailwind enthusiasts
-                  themselves.
-                </p>
-              </TitledParagraph>
-              <hr className="border-blackout dark:border-whiteout opacity-25" />
-              <TitledParagraph title="what I do">
-                <p>
-                  Currently, I’m based in Vienna, Austria (UTC+1), working as a
+              
+              
+            
+              <TitledParagraph title="what I currently do">
+                <p>Hi, I&apos;m Phil! I’m based in Vienna, Austria (UTC+1), working as a
                   freelance fullstack engineer. I founded my own company{" "}
                   <Link
                     href="https://adlerlagune.com"
@@ -177,9 +112,8 @@ const Page = ({}: PageProps) => {
                     adlerlagune
                     <ExternalLink strokeWidth={3} width={20} />
                   </Link>{" "}
-                  in December last year and have tackled several clients
-                  projects since. Software isn’t the only thing I offer at
-                  adlerlagune: I also do 3D design and animation using primarily
+                  in December and have tackled several client
+                  projects since. Software isn&apos;t the only thing I offer: I also do 3D design and animation using primarily
                   Blender and 2D design and motion graphics using the Adobe
                   Suite and Rive / Figma. In addition, I work closely with
                   Austrian software development and marketing agencies as a
@@ -251,7 +185,7 @@ const Page = ({}: PageProps) => {
                       )}
                     </AnimatePresence>
                     volya
-                  </span>: a roguelike built with godot. Another recent project I&apos;m proud of is {" "}  <Link
+                  </span>: a roguelike game built with godot. Another recent project I&apos;m proud of is {" "}  <Link
                     href="https://jotlog.app"
                     target="_blank"
                     className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
@@ -316,7 +250,7 @@ const Page = ({}: PageProps) => {
               </TitledParagraph>
               
               <TitledParagraph title="this job">
-                <p className="mt-10">
+                <p>
                   Honestly, I&apos;ve never been as excited about a job posting.
                   Working for Tailwind Labs, a company who&apos;s product I use
                   literally every day and that&apos;s transformed my professional
@@ -327,7 +261,77 @@ const Page = ({}: PageProps) => {
                   throw at me!
                 </p>
               </TitledParagraph>
+              <hr className="border-blackout dark:border-whiteout opacity-25" />
+
+            <h2 className="font-semibold text-2xl">Personal lore :) / About me</h2>
+
+              <TitledParagraph title="About">
+                <p>I&apos;ve always had a thing for design, but
+                  somewhere in my teens, I realized that traditional drawing, 3D
+                  and 2D design just didn&apos; cut it for me anymore. I needed
+                  something more. Building actual things with code was the
+                  answer.
+                </p>
+              </TitledParagraph>
+              <TitledParagraph title="journey">
+                <p>
+                  My adventure began with C# and Unity, and from there, it was a
+                  bit of a rollercoaster—I dabbled in embedded, and Swift,
+                  improving my understanding of low-level programming, then got
+                  my hands dirty exploring the endless possibilities Rust and
+                  Python during my uni days, and eventually made my way to JS,
+                  TS, and CSS.
+                </p>
+              </TitledParagraph>
+              <TitledParagraph title="webdev">
+                <p>
+                  Web development, and CSS specifically, seemed rough at first
+                  but I immediately fell in love with the endless possibilities
+                  and ways you can go off the beaten path easily. I had finally
+                  found a platform that let me design stuff, and share it with
+                  anyone, anywhere, instantly. I&apos;ve been working professionally
+                  in webdev for 5 years now and plan on doing so for a long
+                  time. Web always wins.
+                </p>
+              </TitledParagraph>
+              <hr className="border-blackout dark:border-whiteout opacity-25" />
+              <h2 className="font-semibold text-2xl">A Love letter to Tailwind</h2>
+              <TitledParagraph title="tailwind 1">
+                <p>
+                  I have a pretty vivid memory of my first encounter with
+                  Tailwind in the wild. Similar to Typescript I was a bit
+                  cautious at first. But after trying it once, I’ve used it every chance I got, and never looked
+                  back. All the context switching—gone. Fighting over
+                  classnames and dreading redesigns when working in teams—gone. Struggling with weird CSS quirks—way less.
+                </p>
+              </TitledParagraph>
+              <TitledParagraph title="tailwind 2">
+                <p>
+                  But one thing about Tailwind is even bigger for me,
+                  personally: I love to build solo, fast. What Tailwind has
+                  enabled me to do was to design in code. Usually, I sketch out
+                  a first prototype of the design in Figma, but move to code
+                  pretty early-on and what happens is, I refine the design
+                  in-code. I&apos;ve tried many CSS frameworks but only Tailwind
+                  allowed me to enter this very specific design-code flow state.
+                </p>
+              </TitledParagraph>
+              <TitledParagraph title="tailwind 3">
+                <p>
+                  Tailwind has also upped my CSS game in general. Your guys&apos;
+                  docs are incredible at explaining all the different features,
+                  and I find myself checking them even if I&apos;m forced to use a
+                  different CSS framework. Beyond just using Tailwind in my own
+                  projects, I&apos;ve also had the pleasure of introducing it to devs
+                  I&apos;ve worked with. Many were skeptical or unsure at first, but
+                  through hands-on demonstrations they came around pretty
+                  quickly. Some of them have even become Tailwind enthusiasts
+                  themselves.
+                </p>
+              </TitledParagraph>
+             
             </>
+            
           )}
           <p className="text-[20px] my-20">
             Thanks for reading this. Love your work, keep it up!
