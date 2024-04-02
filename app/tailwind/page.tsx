@@ -36,7 +36,7 @@ const Page = ({}: PageProps) => {
             : "More Details? show everything"}
         </button>
 
-        <div className="flex flex-col gap-10 mt-10 text-blackout/90 dark:text-whiteout/90">
+        <div className="flex flex-col gap-6 sm:gap-10 mt-10 text-blackout/90 dark:text-whiteout/90">
           {isTLDRShown ? (
             <TitledParagraph title="TLDR">
               <div className="flex flex-col gap-6">
@@ -333,7 +333,7 @@ const Page = ({}: PageProps) => {
             </>
             
           )}
-          <p className="text-[20px] my-20">
+          <p className=" text-lg sm:text-[20px] my-10 sm:my-20">
             Thanks for reading this. Love your work, keep it up!
           </p>
         </div>
