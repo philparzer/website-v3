@@ -101,7 +101,7 @@ const Page = ({}: PageProps) => {
               
               
             
-              <TitledParagraph title="what I currently do">
+              <TitledParagraph title="what I do">
                 <p>Hi, I&apos;m Phil! I’m based in Vienna, Austria (UTC+1), working as a
                   freelance fullstack engineer. I founded my own company{" "}
                   <Link
