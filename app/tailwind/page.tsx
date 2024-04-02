@@ -33,7 +33,7 @@ const Page = ({}: PageProps) => {
         >
           {!isTLDRShown
             ? "Too much text? show TLDR"
-            : "More Details? show everything"}
+            : "More details? show everything"}
         </button>
 
         <div className="flex flex-col gap-6 sm:gap-8 mt-10 text-blackout/90 dark:text-whiteout/90">
@@ -58,7 +58,7 @@ const Page = ({}: PageProps) => {
                   >
                     poca
                     <ExternalLink strokeWidth={3} width={20} />
-                  </Link>{" "} (social meda x page builder), {" "}
+                  </Link>{" "} (social media x page builder), {" "}
                   <Link
                     href="https://adlerlagune.com"
                     target="_blank"
@@ -96,7 +96,7 @@ const Page = ({}: PageProps) => {
                 </p>
               </div>
             </TitledParagraph>
-          ) : (
+          ) :(
             <>
               
               
@@ -135,8 +135,8 @@ const Page = ({}: PageProps) => {
                   >
                     poca
                     <ExternalLink strokeWidth={3} width={20} />
-                  </Link>{" "}
-                  :</span> social media meets page builder. Rn, I&apos;m working on{" "}
+                  </Link>:{" "}
+                  </span> social media meets page builder. Rn, I&apos;m working on{" "}
                   <span
                     onPointerEnter={() => setIsHoveringOverTrud(true)}
                     onPointerLeave={() => setIsHoveringOverTrud(false)}
@@ -194,14 +194,14 @@ const Page = ({}: PageProps) => {
                   >
                     jotlog
                     <ExternalLink strokeWidth={3} width={20} />
-                  </Link>{" "}: a blazingly fast, always offline note taking app built with expo react native and nativewind. A few weeks ago I wrapped up a project I started as an electron app years ago—<Link
+                  </Link>:{" "} a blazingly fast, always offline note taking app built with expo react native and nativewind. A few weeks ago I wrapped up a project I started as an electron app years ago—<Link
                     href="https://buoy-productivity.com"
                     target="_blank"
                     className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                   >
                     buoy
                     <ExternalLink strokeWidth={3} width={20} />
-                  </Link>{" "}: a productivity tracker that reminds you to stay in specific apps and alerts you as soon as you lose focus. I ditched Electron for native SwiftUI/UIKit. <br/>
+                  </Link>:{" "} a productivity tracker that reminds you to stay in specific apps and alerts you as soon as you lose focus. I ditched Electron for native SwiftUI/UIKit. <br/>
                   
                 </p>
                 <p>
@@ -270,7 +270,7 @@ const Page = ({}: PageProps) => {
               <TitledParagraph title="About">
                 <p>I&apos;ve always had a thing for design, but
                   somewhere in my teens, I realized that traditional drawing, 3D
-                  and 2D design just didn&apos; cut it for me anymore. I needed
+                  and 2D design just didn&apos;t cut it for me anymore. I needed
                   something more. Building actual things with code was the
                   answer.
                 </p>
@@ -280,7 +280,7 @@ const Page = ({}: PageProps) => {
                   My adventure began with C# and Unity, and from there, it was a
                   bit of a rollercoaster—I dabbled in embedded, and Swift,
                   improving my understanding of low-level programming, then got
-                  my hands dirty exploring the endless possibilities Rust and
+                  my hands dirty exploring the endless possibilities of Rust and
                   Python during my uni days, and eventually made my way to JS,
                   TS, and CSS.
                 </p>
