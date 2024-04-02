@@ -188,24 +188,6 @@ const Page = ({}: PageProps) => {
                   the fan.
                 </p>
               </TitledParagraph>
-              <TitledParagraph title="teamplay">
-                <p>
-                  Although I feel like I’m fastest when I work solo, I have
-                  plenty of experience working in small to medium sized teams in
-                  agile and non-agile environments. I know how to explain
-                  technical details to non-tech stakeholders, know how to
-                  navigate design hand-offs, and other critical situations.
-                </p>
-              </TitledParagraph>
-              <TitledParagraph title="comms">
-                <p>
-                  I’m a very outgoing and talkative person that often comes
-                  across as non-tech at first. I know my way around non-tech as
-                  well as tech people and enjoy bridging the gap. I grew up
-                  bilingually (English C2, German C2) and picked up Russian (B2)
-                  along the way.
-                </p>
-              </TitledParagraph>
               <TitledParagraph title="(side) projects">
                 <div className="flex flex-col gap-5">
                 <p>
@@ -269,7 +251,7 @@ const Page = ({}: PageProps) => {
                       )}
                     </AnimatePresence>
                     volya
-                  </span>: a roguelike game built with godot. Another recent project I'm proud of is {" "}  <Link
+                  </span>: a roguelike built with godot. Another recent project I&apos;m proud of is {" "}  <Link
                     href="https://jotlog.app"
                     target="_blank"
                     className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
@@ -296,6 +278,43 @@ const Page = ({}: PageProps) => {
                 </p>
                 </div>
               </TitledParagraph>
+              <TitledParagraph title="teamplay">
+                <p>
+                  Although I feel like I’m fastest when I work solo, I have
+                  plenty of experience working in small to medium sized teams in
+                  agile and non-agile environments. I know how to explain
+                  technical details to non-tech stakeholders, know how to
+                  navigate design hand-offs, and other critical situations.
+                  An example of me explaining technical concepts to people unfamiliar is {" "}
+                  <Link
+                    href="https://badfile.zip"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    badfile.zip
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>:{" "} a site I built back when Google launched .zip TLDs. Another example would be some of my {" "}
+                  <Link
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7168931115532034048/"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                   LinkedIn posts
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "} where I try to add value to the community by explaining complex topics in a simple way.
+                 
+                </p>
+              </TitledParagraph>
+              <TitledParagraph title="comms">
+                <p>
+                  I’m a very outgoing and talkative person that often comes
+                  across as non-tech at first. I know my way around non-tech as
+                  well as tech people and enjoy bridging the gap. I grew up
+                  bilingually (English C2, German C2) and picked up Russian (B2)
+                  along the way.
+                </p>
+              </TitledParagraph>
+              
               <TitledParagraph title="this job">
                 <p className="mt-10">
                   Honestly, I&apos;ve never been as excited about a job posting.
