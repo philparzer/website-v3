@@ -219,7 +219,7 @@ const Page = ({}: PageProps) => {
                     poca
                     <ExternalLink strokeWidth={3} width={20} />
                   </Link>{" "}
-                  : social media meets page builder. Rn, I’m working on{" "}
+                  : social media meets page builder. Rn, I&apos;m working on{" "}
                   <span
                     onPointerEnter={() => setIsHoveringOverTrud(true)}
                     onPointerLeave={() => setIsHoveringOverTrud(false)}
