@@ -6,6 +6,7 @@ import ContentBox from "./content-box";
 import { useDebounce } from "@uidotdev/usehooks";
 import Link from "next/link";
 import useFaviconAnimation from "@/lib/use-favicon-animation";
+import { ExternalLink } from "lucide-react";
 
 interface ScrollContainerProps {}
 
@@ -149,9 +150,14 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                 <p className="text-lg  leading-normal md:text-[22px] max-w-[500px] dark:text-zinc-100/50 text-blackout/50 font-medium">
                   I&lsquo;m the co-founder of{" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
-                    <Link href="https://adlerlagune.com" className="underline">
-                      adlerlagune
-                    </Link>
+                  <Link
+                    href="https://adlerlagune.com"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    adlerlagune
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>
                   </span>{" "}
                   a digital agency that also acts a front for my side projects.
                 </p>
