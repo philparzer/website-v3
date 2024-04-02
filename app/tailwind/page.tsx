@@ -252,9 +252,9 @@ const Page = ({}: PageProps) => {
               <TitledParagraph title="this job">
                 <p>
                   Honestly, I&apos;ve never been as excited about a job posting.
-                  Working for Tailwind Labs, a company who&apos;s product I use
+                  Working for Tailwind Labs, a company whose product I use
                   literally every day and that&apos;s transformed my professional
-                  life would be nothing short of amazing. If I get the chance
+                  life would be nothing short of amazing. If I get the chance,
                   I&apos;d love to build out landing pages like the ones you
                   mentioned in the job posting, maybe help you with docs for
                   4.0? as I love to explain stuff or just tackle any task you
