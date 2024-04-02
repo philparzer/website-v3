@@ -75,16 +75,6 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://instagram.com/philipp_parzer"
-              >
-                Instagram
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="transition-opacity opacity-75 hover:opacity-100"
-                rel="noopener noreferrer"
-                target="_blank"
                 href="https://discord.com/users/philguin"
               >
                 Discord
