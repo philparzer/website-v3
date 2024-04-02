@@ -12,6 +12,7 @@ interface PageProps {}
 const Page = ({}: PageProps) => {
   const [isTLDRShown, setIsTLDRShown] = useState(false);
   const [isHoveringOverTrud, setIsHoveringOverTrud] = useState(false);
+  const [isHoveringOverVolya, setIsHoveringOverVolya] = useState(false);
 
   return (
     <main className="flex my-[140px] sm:my-[200px] justify-end sm:justify-center">
@@ -44,10 +45,44 @@ const Page = ({}: PageProps) => {
                   UTC+1.
                 </p>
                 <p>
-                  I love to design in Figma and Blender, know how to animate 2D
+                  I design in Figma and Blender, know how to animate 2D
                   + 3D and use TailwindCSS with NextJS and Typescript for all my
                   frontend needs.
                 </p>
+                <p>Some projects you can check out:{" "}
+                {" "}
+                  <Link
+                    href="https://mypoca.com"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    poca
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "} (social meda x page builder), {" "}
+                  <Link
+                    href="https://adlerlagune.com"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    adlerlagune
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "} (my company/agency), {" "}
+                  <Link
+                    href="https://buoy-productivity.com"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    buoy
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "} (macOS productivity app), {" "}
+                  <Link
+                    href="https://jotlog.app"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    jotlog
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "} (react native note-taking app) </p>
                 <p>
                   I grew up bilingually (English, German) and picked up Russian
                   along the way. I&apos;m a very outgoing and talkative person.
@@ -65,9 +100,9 @@ const Page = ({}: PageProps) => {
             <>
               <TitledParagraph title="About">
                 <p>
-                  Hi, I’m Phil. I’ve always had a thing for design, but
+                  Hi, I&apos;m Phil. I&apos;ve always had a thing for design, but
                   somewhere in my teens, I realized that traditional drawing, 3D
-                  and 2D design just didn’t cut it for me anymore. I needed
+                  and 2D design just didn&apos; cut it for me anymore. I needed
                   something more. Building actual things with code was the
                   answer.
                 </p>
@@ -171,7 +206,8 @@ const Page = ({}: PageProps) => {
                   along the way.
                 </p>
               </TitledParagraph>
-              <TitledParagraph title="side projects">
+              <TitledParagraph title="(side) projects">
+                <div className="flex flex-col gap-5">
                 <p>
                   I&apos;m addicted to side projects. My most recent completed
                   project is{" "}
@@ -209,17 +245,59 @@ const Page = ({}: PageProps) => {
                     </AnimatePresence>
                     trud
                   </span>
-                  : certificates for everything human (digital certificates that
-                  proof that a piece of work has been created by you, and not
-                  AI). With each side project I try to force myself to pick at
-                  least one new tech or framework. I don&apos;t really get the
+                  : certificates for everything human and  <span
+                    onPointerEnter={() => setIsHoveringOverVolya(true)}
+                    onPointerLeave={() => setIsHoveringOverVolya(false)}
+                    className="relative inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    <AnimatePresence>
+                      {isHoveringOverVolya && (
+                        <motion.span
+                          initial={{ scale: 0, rotate: 12 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          exit={{ scale: 0, rotate: 12 }}
+                          className="absolute -top-10 -right-[160px] w-[200px]"
+                        >
+                            <span className="font-normal text-base pl-1 absolute text-whiteout">not live yet</span>
+                          <Image
+                            src="/other/volya.png"
+                            alt="trud side project"
+                            width={608}
+                            height={464}
+                          />
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                    volya
+                  </span>: a roguelike game built with godot. Another recent project I'm proud of is {" "}  <Link
+                    href="https://jotlog.app"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    jotlog
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "}: a blazingly fast, always offline note taking app built with expo react native and nativewind. A few weeks ago I wrapped up a project I started as an electron app years ago—<Link
+                    href="https://buoy-productivity.com"
+                    target="_blank"
+                    className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
+                  >
+                    buoy
+                    <ExternalLink strokeWidth={3} width={20} />
+                  </Link>{" "}: a productivity tracker that reminds you to stay in specific apps and alerts you as soon as you lose focus. I ditched Electron for native SwiftUI/UIKit. <br/>
+                  
+                </p>
+                <p>
+                With each side project I try to force myself to pick at
+                  least one new tech or framework.
+                  I don&apos;t really get the
                   sentiment of &quot;too many decisions&quot; when it comes to webdev.
                   Without iteration, there&apos;s no progress. A new JS framework a
                   day is a good thing.
                 </p>
+                </div>
               </TitledParagraph>
               <TitledParagraph title="this job">
-                <p>
+                <p className="mt-10">
                   Honestly, I&apos;ve never been as excited about a job posting.
                   Working for Tailwind Labs, a company who&apos;s product I use
                   literally every day and that&apos;s transformed my professional
