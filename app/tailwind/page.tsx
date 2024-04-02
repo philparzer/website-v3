@@ -29,17 +29,17 @@ const Page = ({}: PageProps) => {
             setIsTLDRShown(!isTLDRShown);
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="text-base sm:text-[20px] sm:sticky mt-6 sm:mt-0 sm:top-9 z-10 bg-white dark:bg-blackout border dark:border-whiteout/50 rounded-md px-2 sm:px-3 py-0.5 border-blackout"
+          className="text-base sm:sticky mt-6 sm:mt-0 sm:top-9 z-10 bg-white dark:bg-blackout border dark:border-whiteout/50 rounded-md px-2 py-0.5 border-blackout"
         >
           {!isTLDRShown
             ? "Too much text? show TLDR"
             : "More Details? show everything"}
         </button>
 
-        <div className="flex flex-col gap-6 sm:gap-10 mt-10 text-blackout/90 dark:text-whiteout/90">
+        <div className="flex flex-col gap-6 sm:gap-8 mt-10 text-blackout/90 dark:text-whiteout/90">
           {isTLDRShown ? (
             <TitledParagraph title="TLDR">
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2 sm:gap-3">
                 <p>
                   I’m Phil, a freelance fullstack dev based in Vienna, Austria
                   UTC+1.
@@ -127,6 +127,7 @@ const Page = ({}: PageProps) => {
                 <p>
                   I&apos;m addicted to side projects. My most recent completed
                   project is{" "}
+                  <span className="whitespace-nowrap">
                   <Link
                     href="https://mypoca.com"
                     target="_blank"
@@ -135,12 +136,13 @@ const Page = ({}: PageProps) => {
                     poca
                     <ExternalLink strokeWidth={3} width={20} />
                   </Link>{" "}
-                  : social media meets page builder. Rn, I&apos;m working on{" "}
+                  :</span> social media meets page builder. Rn, I&apos;m working on{" "}
                   <span
                     onPointerEnter={() => setIsHoveringOverTrud(true)}
                     onPointerLeave={() => setIsHoveringOverTrud(false)}
                     className="relative inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                   >
+                    <span className="whitespace-nowrap">
                     <AnimatePresence>
                       {isHoveringOverTrud && (
                         <motion.span
@@ -161,7 +163,7 @@ const Page = ({}: PageProps) => {
                     </AnimatePresence>
                     trud
                   </span>
-                  : certificates for everything human and  <span
+                  :</span> certificates for everything human and  <span
                     onPointerEnter={() => setIsHoveringOverVolya(true)}
                     onPointerLeave={() => setIsHoveringOverVolya(false)}
                     className="relative inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
@@ -333,7 +335,7 @@ const Page = ({}: PageProps) => {
             </>
             
           )}
-          <p className=" text-lg sm:text-[20px] my-10 sm:my-20">
+          <p className="text-base sm:text-lg my-10 sm:my-20">
             Thanks for reading this. Love your work, keep it up!
           </p>
         </div>
