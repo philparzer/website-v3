@@ -50,7 +50,7 @@ const Page = ({}: PageProps) => {
                 </p>
                 <p>
                   I grew up bilingually (English, German) and picked up Russian
-                  along the way. I'm a very outgoing and talkative person.
+                  along the way. I&apos;m a very outgoing and talkative person.
                 </p>
                 <p>
                   The posting got me really excited. Working for Tailwind Labs,
@@ -88,7 +88,7 @@ const Page = ({}: PageProps) => {
                   but I immediately fell in love with the endless possibilities
                   and ways you can go off the beaten path easily. I had finally
                   found a platform that let me design stuff, and share it with
-                  anyone, anywhere, instantly. I've been working professionally
+                  anyone, anywhere, instantly. I&apos;ve been working professionally
                   in webdev for 5 years now and plan on doing so for a long
                   time. Web always wins.
                 </p>
@@ -112,18 +112,18 @@ const Page = ({}: PageProps) => {
                   enabled me to do was to design in code. Usually, I sketch out
                   a first prototype of the design in Figma, but move to code
                   pretty early-on and what happens is, I refine the design
-                  in-code. I’ve tried many CSS frameworks but only Tailwind
+                  in-code. I&apos;ve tried many CSS frameworks but only Tailwind
                   allowed me to enter this specific design-code flow state.
                 </p>
               </TitledParagraph>
               <TitledParagraph title="tailwind 3">
                 <p>
-                  Tailwind has also upped my CSS game in general. Your guys'
+                  Tailwind has also upped my CSS game in general. Your guys&apos;
                   docs are incredible at explaining all the different features,
-                  and I find myself checking them even if I’m forced to use a
+                  and I find myself checking them even if I&apos;m forced to use a
                   different CSS framework. Beyond just using Tailwind in my own
-                  projects, I've also had the pleasure of introducing it to devs
-                  I've worked with. Many were skeptical or unsure at first, but
+                  projects, I&apos;ve also had the pleasure of introducing it to devs
+                  I&apos;ve worked with. Many were skeptical or unsure at first, but
                   through hands-on demonstrations they came around pretty
                   quickly. Some of them have even become Tailwind enthusiasts
                   themselves.
@@ -173,7 +173,7 @@ const Page = ({}: PageProps) => {
               </TitledParagraph>
               <TitledParagraph title="side projects">
                 <p>
-                  I'm addicted to side projects. My most recent completed
+                  I&apos;m addicted to side projects. My most recent completed
                   project is{" "}
                   <Link
                     href="https://mypoca.com"
@@ -212,19 +212,19 @@ const Page = ({}: PageProps) => {
                   : certificates for everything human (digital certificates that
                   proof that a piece of work has been created by you, and not
                   AI). With each side project I try to force myself to pick at
-                  least one new tech or framework. I don't really get the
-                  sentiment of "too many decisions" when it comes to webdev.
-                  Without iteration, there's no progress. A new JS framework a
+                  least one new tech or framework. I don&apos;t really get the
+                  sentiment of &quot;too many decisions&quot; when it comes to webdev.
+                  Without iteration, there&apos;s no progress. A new JS framework a
                   day is a good thing.
                 </p>
               </TitledParagraph>
               <TitledParagraph title="this job">
                 <p>
-                  Honestly, I’ve never been as excited about a job posting.
-                  Working for Tailwind Labs, a company who’s product I use
-                  literally every day and that’s transformed my professional
+                  Honestly, I&apos;ve never been as excited about a job posting.
+                  Working for Tailwind Labs, a company who&apos;s product I use
+                  literally every day and that&apos;s transformed my professional
                   life would be nothing short of amazing. If I get the chance
-                  I’d love to build out landing pages like the ones you
+                  I&apos;d love to build out landing pages like the ones you
                   mentioned in the job posting, maybe help you with docs for
                   4.0? as I love to explain stuff or just tackle any task you
                   throw at me!
