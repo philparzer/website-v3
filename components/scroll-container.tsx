@@ -159,7 +159,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                     <ExternalLink strokeWidth={3} width={20} />
                   </Link>
                   </span>{" "}
-                  a digital agency that also acts a front for my side projects.
+                  a digital agency that also dabbles in original products
                 </p>
               </ContentBox>
             </ul>
