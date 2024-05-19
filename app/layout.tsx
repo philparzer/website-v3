@@ -11,7 +11,7 @@ import ogImage from "./opengraph-image.png";
 export const metadata: Metadata = {
   title: "Philipp Parzer",
   description: "design engineering, and comms",
-  metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+  metadataBase: new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`),
   openGraph: {
     images: [
       {
