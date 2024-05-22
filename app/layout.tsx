@@ -6,10 +6,21 @@ import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import { Analytics } from "@vercel/analytics/react"
+import ogImage from "./opengraph-image.png";
 
 export const metadata: Metadata = {
   title: "Philipp Parzer",
   description: "design engineering, and comms",
+  metadataBase: new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`),
+  openGraph: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
