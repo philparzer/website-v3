@@ -8,8 +8,7 @@ const TwitchBanner = async () => {
   const { data: schedule } = await twitchApi.schedule.getSchedule("63996301");
   const stream = await twitchApi.streams.getStreamByUserId("63996301");
 
-  // Use moment-timezone to handle time consistently
-  const now = moment.utc().tz("Europe/Vienna"); // Adjust to your local timezone
+  const now = moment.utc().tz("Europe/Vienna");
   console.log(now.format())
 
   if (stream) {
