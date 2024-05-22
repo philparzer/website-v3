@@ -1,17 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { useState } from "react";
+import TwitchBanner from "./twitch-banner";
+import { Suspense } from "react";
 
 const Nav = () => {
-  const [popoverIsOpen, setPopoverIsOpen] = useState(false);
-
   return (
     <nav className="fixed pointer-events-none top-0 md:px-12 p-4 md:p-6 flex w-screen items-center justify-between z-50">
-     
-
       <svg
         className="hidden md:block absolute right-0 top-0 -scale-x-100 z-50 "
         width="53"
@@ -51,21 +46,17 @@ const Nav = () => {
           alt="spinning head animation"
         />
       </Link>
-      <Link href="https://twitch.tv/philguin" target="_blank" rel="noopener noreferrer" className="relative pointer-events-auto">
-        <div className="px-3 py-1 flex ring-red-500/50 hover:ring-red-500 transition-colors animate-minimal-pulse ring-2 ring-offset-2 items-center gap-2 bg-red-500 text-white rounded-md font-semibold ">
-        <span><span className="text-white/75">Live on</span> Twitch</span>
-        </div>
-      </Link>
-      <Popover onOpenChange={(open) => setPopoverIsOpen(open)}>
+      <Suspense fallback={<>loading...</>}>
+        <TwitchBanner />
+      </Suspense>
+      <Popover>
         <PopoverTrigger
-          className={`transition-opacity pointer-events-auto ${
-            popoverIsOpen ? "opacity-50" : ""
-          } underline underline-offset-[3px]  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
+          className={`pointer-events-auto underline underline-offset-[3px] opacity-100  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
         >
           contact
         </PopoverTrigger>
         <PopoverContent>
-          <ul className="flex pointer-events-auto flex-col gap-5 font-base underline decoration-blackout/50 dark:decoration-whiteout/50 underline-offset-2">
+          <ul className="flex pointer-events-auto font-medium flex-col gap-4 font-base">
             <li>
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>

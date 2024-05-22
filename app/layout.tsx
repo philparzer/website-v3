@@ -12,18 +12,19 @@ export const metadata: Metadata = {
   description: "design engineering, and comms",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} relative font-sans bg-whiteout selection:text-white selection:bg-pink-400 dark:bg-zinc-900 text-blackout dark:text-zinc-100`}
       >
         <ThemeProvider attribute="class">
-          <Nav />
+          <Nav/>
           {children}
           <Footer />
         </ThemeProvider>
