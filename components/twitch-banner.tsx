@@ -1,12 +1,16 @@
 import Link from "next/link";
 import authProvider from "@/lib/twitch-auth";
 import { ApiClient } from "@twurple/api";
+import moment from "moment-timezone";
 
 const TwitchBanner = async () => {
   const twitchApi = new ApiClient({ authProvider });
   const { data: schedule } = await twitchApi.schedule.getSchedule("63996301");
   const stream = await twitchApi.streams.getStreamByUserId("63996301");
-  const now = new Date();
+
+  // Use moment-timezone to handle time consistently
+  const now = moment.utc().tz("Europe/Vienna"); // Adjust to your local timezone
+  console.log(now.format())
 
   if (stream) {
     return (
@@ -14,9 +18,9 @@ const TwitchBanner = async () => {
         href="https://twitch.tv/philguin"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative pointer-events-auto animate-in fade-in-10 slide-in-from-top-10"
+        className="relative pointer-events-auto transition-all animate-in slide-in-from-top-36"
       >
-        <div className="px-3 text-xs sm:text-base py-1 flex delay-200 dark:hover:ring-red-600 dark:ring-red-600/50 ring-red-500/50 hover:ring-red-500 transition-colors animate-minimal-pulse ring-2 ring-offset-2 items-center gap-2 dark:bg-red-600 bg-red-500 text-white rounded-md sm:font-semibold ">
+        <div className="px-3 text-xs sm:text-base py-1 flex dark:hover:ring-red-600 dark:ring-red-600/50 ring-red-500/50 hover:ring-red-500 transition-colors animate-minimal-pulse ring-2 ring-offset-2 items-center gap-2 dark:bg-red-600 bg-red-500 text-white rounded-md sm:font-semibold ">
           <span>
             <span className="text-white/75">Live on</span>{" "}
             <span className="sm:font-semibold font-medium">Twitch</span>
@@ -28,14 +32,15 @@ const TwitchBanner = async () => {
 
   if (
     schedule.segments.some((segment) => {
+      const segmentStart = moment(segment.startDate).tz("Europe/Vienna");
       return (
-        segment.startDate.getHours() <= now.getHours() && //check if the stream shouldve started
-        segment.startDate.getDate() === now.getDate() //check if it's the same day
+        segmentStart.hours() <= now.hours() && // Check if the stream should have started
+        segmentStart.date() === now.date() // Check if it's the same day
       );
     })
   ) {
     return (
-      <div className="text-xs sm:text-sm pointer-events-auto animate-in fade-in-10">
+      <div className="text-xs sm:text-sm pointer-events-auto">
         <div className="">
           should be live on{" "}
           <Link href="https://twitch.tv/philguin">Twitch</Link> rn
@@ -49,8 +54,7 @@ const TwitchBanner = async () => {
     );
   }
 
-  return;
-  null;
+  return null;
 };
 
 export default TwitchBanner;
