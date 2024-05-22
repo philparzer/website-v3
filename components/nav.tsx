@@ -1,13 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { useState } from "react";
+import TwitchBanner from "./twitch-banner";
+import { Suspense } from "react";
 
 const Nav = () => {
-  const [popoverIsOpen, setPopoverIsOpen] = useState(false);
-
   return (
     <nav className="fixed pointer-events-none top-0 md:px-12 p-4 md:p-6 flex w-screen items-center justify-between z-50">
       <svg
@@ -37,7 +34,10 @@ const Nav = () => {
           d="M0 -5.35442e-05H52.1C52.1 -5.35442e-05 24.8947 -0.434101 12.4473 12.7519C2.67029e-05 25.938 0 51.8759 0 51.8759V-5.35442e-05Z"
         />
       </svg>
-      <Link href="/" className="relative pointer-events-auto w-[54px] h-[54px] md:w-[64px] md:h-[64px]">
+      <Link
+        href="/"
+        className="relative pointer-events-auto w-[54px] h-[54px] md:w-[64px] md:h-[64px]"
+      >
         <Image
           priority
           src="/logo-anim.gif"
@@ -46,16 +46,17 @@ const Nav = () => {
           alt="spinning head animation"
         />
       </Link>
-      <Popover onOpenChange={(open) => setPopoverIsOpen(open)}>
+      <Suspense fallback={null}>
+        <TwitchBanner />
+      </Suspense>
+      <Popover>
         <PopoverTrigger
-          className={`transition-opacity pointer-events-auto ${
-            popoverIsOpen ? "opacity-50" : ""
-          } underline underline-offset-[3px]  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
+          className={`pointer-events-auto underline underline-offset-[3px] opacity-100  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
         >
           contact
         </PopoverTrigger>
         <PopoverContent>
-          <ul className="flex pointer-events-auto flex-col gap-5 font-base underline decoration-blackout/50 dark:decoration-whiteout/50 underline-offset-2">
+          <ul className="flex pointer-events-auto font-medium flex-col gap-4 font-base">
             <li>
               <Link href="mailto:parzerphilipp@gmail.com">email</Link>
             </li>
@@ -69,6 +70,9 @@ const Nav = () => {
             </li>
             <li>
               <Link href="https://twitter.com/philipp_parzer">x.com</Link>
+            </li>
+            <li>
+              <Link href="https://twitch.com/philguin">twitch</Link>
             </li>
           </ul>
         </PopoverContent>
