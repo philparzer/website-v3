@@ -36,14 +36,15 @@ const config = {
           to: { height: "0" },
         },
         "minimal-pulse": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.7" },
-        }
+          "0%, 100%": { opacity: "1", scale: "1.01" },
+          "50%": { opacity: "0.9", scale: "1" },
+        }, 
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "minimal-pulse": "minimal-pulse 2ss ease-in-out infinite",
+        "minimal-pulse": "minimal-pulse 2s ease-in-out infinite",
+        "slide-in-from-top": "slide-in-from-top 0.2s ease-out",
       },
     },
   },

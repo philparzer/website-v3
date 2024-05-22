@@ -46,7 +46,7 @@ const Nav = () => {
           alt="spinning head animation"
         />
       </Link>
-      <Suspense fallback={<>loading...</>}>
+      <Suspense fallback={null}>
         <TwitchBanner />
       </Suspense>
       <Popover>
@@ -70,6 +70,9 @@ const Nav = () => {
             </li>
             <li>
               <Link href="https://twitter.com/philipp_parzer">x.com</Link>
+            </li>
+            <li>
+              <Link href="https://twitch.com/philguin">twitch</Link>
             </li>
           </ul>
         </PopoverContent>
