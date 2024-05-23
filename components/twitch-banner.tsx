@@ -8,7 +8,7 @@ const TwitchBanner = async () => {
   const { data: schedule } = await twitchApi.schedule.getSchedule("63996301");
   const stream = await twitchApi.streams.getStreamByUserId("63996301");
 
-  const now = moment.utc().tz("Europe/Vienna");
+  const now = moment.utc().tz("Europe/Luxembourg");
   console.log(now.format())
 
   if (stream) {
@@ -31,7 +31,7 @@ const TwitchBanner = async () => {
 
   if (
     schedule.segments.some((segment) => {
-      const segmentStart = moment(segment.startDate).tz("Europe/Vienna");
+      const segmentStart = moment.utc(segment.startDate).tz("Europe/Luxembourg");
       return (
         segmentStart.hours() <= now.hours() && // Check if the stream should have started
         segmentStart.date() === now.date() // Check if it's the same day
