@@ -4,12 +4,13 @@ import { ApiClient } from "@twurple/api";
 import moment from "moment-timezone";
 
 const TwitchBanner = async () => {
+
   const twitchApi = new ApiClient({ authProvider });
+
   const { data: schedule } = await twitchApi.schedule.getSchedule("63996301");
   const stream = await twitchApi.streams.getStreamByUserId("63996301");
 
   const now = moment.utc().tz("Europe/Luxembourg");
-  console.log(now.format())
 
   if (stream) {
     return (
