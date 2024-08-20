@@ -119,6 +119,22 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
+                href="https://undeaddomains.com"
+              >
+                <Image
+                  alt="undead domains"
+                  src="/logos/undead.png"
+                  width={20}
+                  height={20}
+                ></Image>
+                undead domains
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
+                rel="noopener noreferrer"
+                target="_blank"
                 href="https://buoy-productivity.com"
               >
                 <Image
