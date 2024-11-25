@@ -46,9 +46,9 @@ const Nav = () => {
           alt="spinning head animation"
         />
       </Link>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <TwitchBanner />
-      </Suspense>
+      </Suspense> */}
       <Popover>
         <PopoverTrigger
           className={`pointer-events-auto underline underline-offset-[3px] opacity-100  decoration-[1.5px] decoration-blackout/50 dark:decoration-whiteout/50 md:mr-10 font-medium`}
@@ -73,6 +73,9 @@ const Nav = () => {
             </li>
             <li>
               <Link href="https://twitch.com/philguin">twitch</Link>
+            </li>
+            <li>
+              <Link href="https://bsky.app/profile/philparzer.com">bluesky</Link>
             </li>
           </ul>
         </PopoverContent>

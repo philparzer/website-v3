@@ -38,8 +38,28 @@ const Footer = ({}: FooterProps) => {
       </div>
       <div className="bg-blackout p-20 pb-10 rounded-2xl mb-4 md:mb-20 text-whiteout flex flex-col gap-20 md:gap-0 items-center md:items-start md:grid md:grid-cols-4">
         <div className="w-[200px] flex flex-col items-center text-center md:items-start md:text-start">
-          <h2 className="text-lg font-semibold">Socials</h2>
+          <h2 className="text-lg font-semibold">Find me on</h2>
           <ul className="font-light gap-1 flex flex-col mt-2">
+          <li>
+              <Link
+                className="transition-opacity opacity-75 hover:opacity-100"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://twitter.com/philipp_parzer"
+              >
+                x.com
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-opacity opacity-75 hover:opacity-100"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://bsky.app/profile/philparzer.com"
+              >
+                Bluesky
+              </Link>
+            </li>
             <li>
               <Link
                 className="transition-opacity opacity-75 hover:opacity-100"
@@ -50,16 +70,7 @@ const Footer = ({}: FooterProps) => {
                 LinkedIn
               </Link>
             </li>
-            <li>
-              <Link
-                className="transition-opacity opacity-75 hover:opacity-100"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://twitter.com/philipp_parzer"
-              >
-                Twitter
-              </Link>
-            </li>
+           
             <li>
               <Link
                 className="transition-opacity opacity-75 hover:opacity-100"
@@ -90,6 +101,7 @@ const Footer = ({}: FooterProps) => {
                 Twitch
               </Link>
             </li>
+           
           </ul>
         </div>
         <div className="w-[200px] flex flex-col text-center md:items-start md:text-start">
@@ -112,6 +124,25 @@ const Footer = ({}: FooterProps) => {
                   ></Image>
                 </div>
                 adlerlagune
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://thesentproject.com"
+              >
+                <div className="w-[20px] h-[20px] flex items-center justify-center">
+                  <Image
+                    alt="thesentproject chat bubble logo"
+                    className=""
+                    src="/logos/tsp.png"
+                    width={19}
+                    height={19}
+                  ></Image>
+                </div>
+                thesentproject
               </Link>
             </li>
             <li>
@@ -295,7 +326,7 @@ const Footer = ({}: FooterProps) => {
               </Link>
             </p>
             <p className="text-xs opacity-50 text-center w-full mt-10 md:mt-0 md:w-auto">
-              last update: SPRING2024
+              last update: WINTER2024
             </p>
           </div>
         </div>
