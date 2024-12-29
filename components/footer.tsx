@@ -45,7 +45,7 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://twitter.com/philipp_parzer"
+                href="https://twitter.com/parzerp"
               >
                 x.com
               </Link>

@@ -69,7 +69,7 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://twitter.com/philipp_parzer">x.com</Link>
+              <Link href="https://x.com/parzerp">x.com</Link>
             </li>
             <li>
               <Link href="https://twitch.com/philguin">twitch</Link>
