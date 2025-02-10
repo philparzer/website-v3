@@ -1,9 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ContentBox from "./content-box";
-import { useDebounce } from "@uidotdev/usehooks";
 import Link from "next/link";
 import useFaviconAnimation from "@/lib/use-favicon-animation";
 import { ExternalLink } from "lucide-react";
@@ -15,7 +14,6 @@ const WORDS = ["aware", "cutting-edge", "proficient", "daring"];
 const ScrollContainer = ({}: ScrollContainerProps) => {
   useFaviconAnimation();
   const [activeContentBoxIndex, setActiveContentBoxIndex] = useState(0);
-  const debouncedActiveContentIndex = useDebounce(activeContentBoxIndex, 300);
 
   return (
     <div className="relative w-full md:mb-[200px] max-w-screen flex flex-col items-center">
@@ -32,10 +30,10 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   <div>
                     <AnimatePresence initial={false}>
                       {WORDS.map((word, i) => {
-                        if (i === debouncedActiveContentIndex)
+                        if (i === activeContentBoxIndex)
                           return (
                             <motion.div
-                              className="absolute left-0 top-0  rounded-lg"
+                              className="absolute left-0 top-0 rounded-lg"
                               key={word + i}
                               initial={{
                                 x: -20,
@@ -88,7 +86,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
             <ul>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
-                activeIndex={debouncedActiveContentIndex}
+                activeIndex={activeContentBoxIndex}
                 index={0}
                 riveSource="/rive/aware.riv"
                 riveStateMachine="1"
@@ -107,7 +105,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
               </ContentBox>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
-                activeIndex={debouncedActiveContentIndex}
+                activeIndex={activeContentBoxIndex}
                 index={1}
                 riveSource="/rive/cutting-edge.riv"
                 riveStateMachine="2"
@@ -123,7 +121,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
               </ContentBox>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
-                activeIndex={debouncedActiveContentIndex}
+                activeIndex={activeContentBoxIndex}
                 index={2}
                 riveSource="/rive/proficient.riv"
                 riveStateMachine="3"
@@ -142,7 +140,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
               </ContentBox>
               <ContentBox
                 setActiveIndex={setActiveContentBoxIndex}
-                activeIndex={debouncedActiveContentIndex}
+                activeIndex={activeContentBoxIndex}
                 index={3}
                 riveSource="/rive/daring.riv"
                 riveStateMachine="4"
