@@ -9,6 +9,7 @@ interface ContentBoxProps {
   riveStateMachine: string;
   index: number;
   activeIndex: number;
+  artboard: string;
   setActiveIndex: (index: number) => void;
   keywords?: string[];
 }
@@ -21,6 +22,7 @@ const ContentBox = ({
   keywords,
   setActiveIndex,
   index,
+  artboard,
 }: ContentBoxProps) => {
   const ref = useRef(null);
 
@@ -57,6 +59,7 @@ const ContentBox = ({
               isActive={activeIndex === index}
               stateMachine={riveStateMachine}
               src={riveSource}
+              artboard={artboard}
             />
           </motion.div>
         )}

@@ -7,13 +7,15 @@ interface RiveAnimationProps {
   src: string;
   stateMachine: string;
   isActive?: boolean;
+  artboard: string;
 }
 
-const RiveAnimation = ({ src, stateMachine, isActive }: RiveAnimationProps) => {
+const RiveAnimation = ({ src, stateMachine, isActive, artboard }: RiveAnimationProps) => {
   const { rive, RiveComponent } = useRive({
     src: src,
     stateMachines: stateMachine,
     autoplay: false,
+    artboard: artboard,
   });
 
   const [isLoaded, setIsLoaded] = useState(false);
