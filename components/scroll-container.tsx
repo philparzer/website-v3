@@ -32,7 +32,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   <div>
                     <AnimatePresence initial={false}>
                       {WORDS.map((word, i) => {
-                        if (i === debouncedActiveContentIndex)
+                        if (i === activeContentBoxIndex)
                           return (
                             <motion.div
                               className="absolute left-0 top-0  rounded-lg"
