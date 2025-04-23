@@ -131,6 +131,24 @@ const Footer = ({}: FooterProps) => {
                 className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
                 rel="noopener noreferrer"
                 target="_blank"
+                href="https://0cred.com"
+              >
+                <div className="w-[20px] h-[20px] flex items-center justify-center">
+                  <Image
+                    alt="0cre"
+                    src="/logos/0cred.png"
+                    width={20}
+                    height={20}
+                  ></Image>
+                </div>
+                0cred
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
+                rel="noopener noreferrer"
+                target="_blank"
                 href="https://thesentproject.com"
               >
                 <div className="w-[20px] h-[20px] flex items-center justify-center">
