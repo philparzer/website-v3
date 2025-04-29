@@ -270,15 +270,14 @@ const Footer = ({}: FooterProps) => {
                   +436605439322
                 </Link>
               </p>
-              <Link
+              <div
                 rel="noopener noreferrer"
-                className="opacity-50 transition-opacity hover:opacity-100"
-                target="_blank"
-                href="https://www.google.com/maps/dir//Robertgasse,+1020+Wien/@48.2142711,16.3064723,12z/"
+                className="opacity-50"
+                
               >
-                <p className="mt-2">Robertgasse 1</p>
-                <p>1020, Vienna, Austria</p>
-              </Link>
+                <p className="mt-2">Seitenstettengasse 5/37</p>
+                <p>1010, Vienna, Austria</p>
+              </div>
             </div>
           </div>
         </div>
