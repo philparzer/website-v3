@@ -156,7 +156,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                   I&lsquo;m the co-founder of{" "}
                   <span className="dark:text-zinc-100 text-blackout whitespace-nowrap">
                     <Link
-                      href="https://adlerlagune.com"
+                      href="https//adler.studio"
                       target="_blank"
                       className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                     >

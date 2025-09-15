@@ -60,7 +60,7 @@ const Page = ({}: PageProps) => {
                     <ExternalLink strokeWidth={3} width={20} />
                   </Link>{" "} (social media x page builder), {" "}
                   <Link
-                    href="https://adlerlagune.com"
+                    href="https//adler.studio"
                     target="_blank"
                     className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                   >
@@ -105,7 +105,7 @@ const Page = ({}: PageProps) => {
                 <p>Hi, I&apos;m Phil! I’m based in Vienna, Austria (UTC+1), working as a
                   freelance fullstack engineer. I founded my own company{" "}
                   <Link
-                    href="https://adlerlagune.com"
+                    href="https//adler.studio"
                     target="_blank"
                     className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                   >
