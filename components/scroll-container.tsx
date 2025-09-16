@@ -160,7 +160,7 @@ const ScrollContainer = ({}: ScrollContainerProps) => {
                       target="_blank"
                       className="underline inline-flex dark:text-whiteout/100 gap-1 items-center font-semibold text-blackout/100"
                     >
-                      adlerlagune
+                      adler.studio
                       <ExternalLink strokeWidth={3} width={20} />
                     </Link>
                   </span>{" "}

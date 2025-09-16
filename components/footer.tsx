@@ -123,7 +123,7 @@ const Footer = ({}: FooterProps) => {
                     height={19}
                   ></Image>
                 </div>
-                adlerlagune
+                adler.studio
               </Link>
             </li>
             <li>
