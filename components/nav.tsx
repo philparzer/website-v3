@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 const Nav = () => {
   return (
-    <nav className="fixed pointer-events-none top-0 md:px-12 p-4 md:p-6 flex w-screen items-center justify-between z-50">
+    <nav id="4fc79a37-bf81-4b54-a6c4-6e01860288bf" className="fixed pointer-events-none top-0 md:px-12 p-4 md:p-6 flex w-screen items-center justify-between z-50">
       <svg
         className="hidden md:block absolute right-0 top-0 -scale-x-100 z-50 "
         width="53"
