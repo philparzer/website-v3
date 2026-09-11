@@ -70,7 +70,7 @@ const Footer = ({}: FooterProps) => {
                 LinkedIn
               </Link>
             </li>
-           
+
             <li>
               <Link
                 className="transition-opacity opacity-75 hover:opacity-100"
@@ -101,7 +101,7 @@ const Footer = ({}: FooterProps) => {
                 Twitch
               </Link>
             </li>
-           
+
           </ul>
         </div>
         <div className="w-[200px] flex flex-col text-center md:items-start md:text-start">
@@ -126,6 +126,7 @@ const Footer = ({}: FooterProps) => {
                 adler.studio
               </Link>
             </li>
+
             <li>
               <Link
                 className="transition-opacity flex items-center gap-2 opacity-75 hover:opacity-100"
@@ -273,12 +274,24 @@ const Footer = ({}: FooterProps) => {
               <div
                 rel="noopener noreferrer"
                 className="opacity-50"
-                
+
               >
                 <p className="mt-2">Seitenstettengasse 5/37</p>
                 <p>1010, Vienna, Austria</p>
               </div>
             </div>
+            <Link
+              className="opacity-50 mt-4 transition-opacity hover:opacity-100"
+              href="https://adler.studio"
+            >
+              www.adler.studio
+            </Link>
+            <Link
+              className="opacity-50 transition-opacity hover:opacity-100"
+              href="https://sicher-ki.de"
+            >
+              www.sicher-ki.de
+            </Link>
           </div>
         </div>
         <div className="col-span-4 md:mt-20 text-center md:items-start md:text-start md:-order-none order-first">
